@@ -1,0 +1,6 @@
+.git
+.env
+data/
+notebooks/
+dashboard/
+__pycache__/
