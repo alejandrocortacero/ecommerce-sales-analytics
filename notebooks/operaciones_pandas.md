@@ -389,3 +389,12 @@ Pandas identifica, entre otros:
 - float64: números decimales.
 - object: puede contener texto u otros objetos Python.
 Observa que Precio se representará como float64, porque incluye un dato ausente y Pandas utiliza NaN para representarlo en esta columna numérica.
+
+# OPERACIONES PANDAS RESUMIDAS
+para importar pandas usamos `import pandas as pd`.
+ - `pd.shape`: dimensiones de la tabla; shape[0] muestra solo las filas, shape[1] muestra solo las columnas.
+ - `pd.info()`: muestra los tipos de datos, la cantidad de valores no nulos y el uso de la memoria.
+ - `pd.head()`: muestra los 5 primeros registros de la tabla, si usamos pd.head(10) mostrara los primeros 10 registros.
+ - `pd.tail()`: muestra los 5 ultimos registros de la tabla, igual que con head podemos indicar la cantidad concreta de registros que mostrar.
+ - `pd.describe()`: calcula estadísticas sobre las columnas numéricas:
+    - 
