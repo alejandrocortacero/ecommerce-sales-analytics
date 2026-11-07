@@ -134,7 +134,7 @@ ventas_ordenadas
 ```
 
 Ahora vamos a dar un salto importante. Agruparemos información con groupby(). Hasta aquí hemos analizado ventas individuales, pero una empresa suele querer conocer información agregada. Por ejemplo: ¿Qué producto ha generado más facturación acumulada? Tenemos varios pedidos de teclados y ratones. Necesitamos sumar su facturación por producto.
-```
+```json
 facturacion_productos = df.groupby("Producto")["Facturación"].sum()
 
 facturacion_productos
@@ -392,12 +392,16 @@ Observa que Precio se representará como float64, porque incluye un dato ausente
 
 # OPERACIONES PANDAS RESUMIDAS
 para importar pandas usamos `import pandas as pd`.
+ - `pd.DataFrame()`: Crea un DataFrame a partir de datos.
+ - `pd.read_excel()`: Importa un archivo Excel
+ - `pd.read_csv()`: Importa un archivo CSV
+ - `df.to_csv()`: Exporta un DataFrame a CSV
+ - `pd.copy()`: Crear una copia independiente que al alterar dicha copia no altera el dataframe original
  - `pd.shape`: dimensiones de la tabla; shape[0] muestra solo las filas, shape[1] muestra solo las columnas.
  - `pd.info()`: muestra los tipos de datos, la cantidad de valores no nulos y el uso de la memoria.
  - `pd.head()`: muestra los 5 primeros registros de la tabla, si usamos pd.head(10) mostrara los primeros 10 registros.
  - `pd.tail()`: muestra los 5 ultimos registros de la tabla, igual que con head podemos indicar la cantidad concreta de registros que mostrar.
  - `pd.describe()`: calcula estadísticas sobre las columnas numéricas: **count**: valores no nulos; **mean**: media aritmética; **std**: desviación estándar; **min**: mínimo; **25%**: primer cuartil; **50%**: mediana; **75%**: tercer cuartil; **max**: máximo.
- - `copy()`: Crear una copia independiente
  - `astype()`: Convertir tipos de datos
  - `str.startswith()`: Comprobar prefijos de texto
  - `dt.year`: Extraer el año de una fecha
