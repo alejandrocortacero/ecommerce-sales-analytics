@@ -65,3 +65,31 @@ SELECT
     ) AS crecimiento_porcentaje
 FROM comparacion
 ORDER BY mes;
+WITH ventas_por_pais AS (
+    SELECT
+        pais,
+        SUM(importe_linea) AS facturacion
+    FROM ventas_online_retail
+    GROUP BY pais
+)
+
+SELECT
+    pais,
+    facturacion
+FROM ventas_por_pais
+WHERE facturacion > 100000
+ORDER BY facturacion DESC;
+WITH ventas_por_pais AS (
+    SELECT
+        pais,
+        SUM(importe_linea) AS facturacion
+    FROM ventas_online_retail
+    GROUP BY pais
+)
+
+SELECT
+    pais,
+    facturacion
+FROM ventas_por_pais
+WHERE facturacion > 100000
+ORDER BY facturacion DESC;
